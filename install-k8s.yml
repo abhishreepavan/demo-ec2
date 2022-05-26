@@ -8,7 +8,7 @@
   connection: ssh
 
   tasks:
-
+    - import_tasks: yum-lock-wait.yaml
     - name: install Docker
       yum:
        name: docker
