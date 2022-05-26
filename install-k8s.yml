@@ -14,18 +14,18 @@
        name: docker
        state: present
        update_cache: true
-
+    - import_tasks: yum-lock-wait.yaml
     - name: start Docker
       service:
        name: docker
        state: started
-
+    - import_tasks: yum-lock-wait.yaml
     - name: ensure net.bridge.bridge-nf-call-ip6tables is set to 1
       sysctl:
        name: net.bridge.bridge-nf-call-ip6tables
        value: 1
        state: present
-
+    - import_tasks: yum-lock-wait.yaml
     - name: ensure net.bridge.bridge-nf-call-iptables is set to 1
       sysctl:
        name: net.bridge.bridge-nf-call-iptables
