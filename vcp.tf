@@ -115,7 +115,7 @@ resource "aws_instance" "ansible" {
       host        = aws_instance.ansible.public_ip
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("./ansible_terraform.pem")
+      private_key = file("./jenkins.pem")
     }
     provisioner "file" {
     source      = "ansible_terraform.pem"
@@ -124,7 +124,7 @@ resource "aws_instance" "ansible" {
     host        = aws_instance.ansible.public_ip
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("./ansible_terraform.pem")
+    private_key = file("./jenkins.pem")
     }
     }
 
@@ -141,7 +141,7 @@ resource "aws_instance" "ansible" {
     host        = aws_instance.ansible.public_ip
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("./ansible_terraform.pem")
+    private_key = file("./jenkins.pem")
     }
     }
     #provisioner "remote-exec" {
@@ -197,7 +197,7 @@ resource "aws_instance" "Node1" {
       host        = aws_instance.Node1.public_ip
       type        = "ssh"
       user        = "ec2-user"
-      private_key = file("./ansible_terraform.pem")
+      private_key = file("./jenkins.pem")
     }
   }
     provisioner "local-exec" {
