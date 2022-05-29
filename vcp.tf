@@ -102,7 +102,7 @@ resource "aws_instance" "ansible" {
 
   ami                    = "ami-079b5e5b3971bd10d"
   instance_type          = "t2.micro"
-  key_name               = "ansible_terraform"
+  key_name               = "jenkins"
   monitoring             = true
   vpc_security_group_ids = [aws_security_group.security_group.id]
   subnet_id              = aws_subnet.public-subnet-1.id
