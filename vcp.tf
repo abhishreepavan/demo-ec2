@@ -119,7 +119,7 @@ resource "aws_instance" "ansible" {
     }
     provisioner "file" {
     source      = "ansible_terraform.pem"
-    destination = "/home/ec2-user/ansible_terraform.pem"
+    destination = "/home/ec2-user/jenkins.pem"
     connection {
     host        = aws_instance.ansible.public_ip
     type        = "ssh"
