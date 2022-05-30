@@ -57,5 +57,6 @@
        enabled: yes
        state: started
     - name: set hostname
-      hostnamectl set-hostname master-node
+      sudo:
+        hostnamectl set-hostname master-node
        
