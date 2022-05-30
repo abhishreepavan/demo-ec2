@@ -56,7 +56,4 @@
        name: kubelet
        enabled: yes
        state: started
-    - name: set hostname
-      sudo:
-        hostnamectl set-hostname master-node
        
