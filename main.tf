@@ -114,4 +114,5 @@ resource "aws_instance" "ansible" {
     provisioner "local-exec" {
     command = "echo ${aws_instance.ansible.public_dns} > inventory"
   }
+}
 
