@@ -110,7 +110,7 @@ resource "aws_instance" "ansible" {
       private_key = file("./jenkins.pem")
     }
     provisioner "file" {
-    source      = "ansible_terraform.pem"
+    source      = "jenkins.pem"
     destination = "/home/ec2-user/jenkins.pem"
     connection {
     host        = aws_instance.ansible.public_ip
